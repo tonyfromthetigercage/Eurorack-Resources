@@ -1,0 +1,463 @@
+<table align="center" id="MatrixForm" border="0">
+    <tbody>
+	<tr>
+            <td>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td class="gnlLogo" style="height: 108px;">
+                                    <img alt="" src="clientimages/logo.png" /></td>
+                                    <td style="height: 108px; text-align: center; vertical-align: middle;">
+                                    <textarea class="formInputExpand formTitle" id="txtFormTitle" style="width: 400px;" readonly="readonly" runat="server">Triple P Positive Parenting Program Referral Form</textarea></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+		<tr><td>&nbsp;</td></tr>
+		
+		
+<!--Referral Source Information-->
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+		
+		<tr>
+<th class="sectionTitle" align="left">Referral Source Information</th>
+</tr> 
+<tr>
+<td style="border: 1px black solid;">
+<table width="100%" border="0">
+<tr>
+<td>
+<table width="100%">
+<tr>
+<td>CSSD File Number:<br>
+<textarea id="CssdFileNumber" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+<td>Date of Referral:(YYYY-MM-DD)<br>
+<input id="ReferralDate" runat="server" class="formInput datepicker" type="text" style="width:155px;">
+</td> 
+<td>Date Received:(YYYY-MM-DD)<br>
+<input id="ReceivedDate" runat="server" class="formInput datepicker" type="text" style="width:155px;">
+</td>
+</tr>
+<tr>
+<td>IS File Number <b><i>(Completed by RMIS)</b></i>:<br>
+<textarea id="IsFileNumber" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+</tr>
+
+<tr>
+<td>Referring Social Worker:<br>
+<textarea id="ReferringSocialWorker" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+<td>Telephone Number:<br>
+<textarea id="ReferringSocialWorkerPhone" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+<td>Office Site:<br>
+<textarea id="ReferringSocialWorkerOfficeSite" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+</tr>
+
+<tr>
+<td>Clinical Program Supervisor:<br>
+<textarea id="ClinicalProgramSupervisor" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+<td>Telephone Number:<br>
+<textarea id="ClinicalProgramSupervisorPhone" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+<td>Office Site:<br>
+<textarea id="ClinicalProgramSupervisorOfficeSite" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+</tr>
+
+
+
+
+
+</table>
+</td> 
+</tr> 
+</table>
+</td>
+</tr> 
+<tr><td>&nbsp;</td></tr>
+
+<!--Current Family Information-->
+
+<tr>
+<th class="sectionTitle" align="left">Current Family Information</th>
+</tr> 
+<tr>
+<td style="border: 1px black solid;">
+<table width="100%" border="0">
+<tr>
+<td>
+<table width="100%">
+
+<tr>
+<td>Parent's Name:<br>
+<textarea id="ParentName1" runat="server" style="width:400px;" class="formInputExpand"></textarea></td></tr>
+
+<tr>
+<td>Telephone Number:<br>
+<textarea id="ParentPhone1" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+</tr>
+
+<tr>
+<td>Address:<br>
+<textarea id="ParentAddress1" runat="server" style="width:685px;" class="formInputExpand"></textarea> </td>
+</tr>
+
+<tr>
+<td>Parent's Name:<br>
+<textarea id="ParentName2" runat="server" style="width:400px;" class="formInputExpand"></textarea></td></tr>
+
+<tr>
+<td>Telephone Number:<br>
+<textarea id="ParentPhone2" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
+</tr>
+
+<tr>
+<td>Address:<br>
+<textarea id="ParentAddress2" runat="server" style="width:685px;" class="formInputExpand"></textarea> </td>
+</tr>
+
+
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+
+<td>Are both parents being referred to Triple P?</td>
+
+<td width="20px;"><input type="radio" runat="server" id="rdoBothParentsReferredYes" name="rdoBothParentsReferred" value="Value Here" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td width="20px;"><input type="radio" runat="server" id="rdoBothParentsReferredNo" name="rdoBothParentsReferred" value="Value Here" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+
+
+
+
+<tr>
+<td>If one parent is being referred to Triple P, please identify that parent.<br>
+<textarea id="ParentReferred" runat="server" style="width:400px;" class="formInputExpand"></textarea></td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><strong>Provide a list of the children residing in the home under the age of 12.</strong>
+</td>
+</tr>
+
+<tr>
+<td style="padding:0px;">
+<table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="black">
+<tr>
+<td style="text-align:center"><strong>Name of Child</strong></td>
+<td style="text-align:center"><strong>Date of Birth</strong></td>
+</tr>
+<tr>
+<td><textarea id="ChildName1" runat="server" style="width:550px;" class="formInputExpand"></textarea></td>
+<td><input id="ChildDob1" runat="server" class="formInput datepicker" type="text" style="width:131px;"></td>
+</tr>
+<tr>
+<td><textarea id="ChildName2" runat="server" style="width:550px;" class="formInputExpand"></textarea></td>
+<td><input id="ChildDob2" runat="server" class="formInput datepicker" type="text" style="width:131px;"></td>
+</tr>
+<tr>
+<td><textarea id="ChildName3" runat="server" style="width:550px;" class="formInputExpand"></textarea></td>
+<td><input id="ChildDob3" runat="server" class="formInput datepicker" type="text" style="width:131px;"></td>
+</tr>
+<tr>
+<td><textarea id="ChildName4" runat="server" style="width:550px;" class="formInputExpand"></textarea></td>
+<td><input id="ChildDob4" runat="server" class="formInput datepicker" type="text" style="width:131px;"></td>
+</tr>
+<tr>
+<td><textarea id="ChildName5" runat="server" style="width:550px;" class="formInputExpand"></textarea></td>
+<td><input id="ChildDob5" runat="server" class="formInput datepicker" type="text" style="width:131px;"></td>
+</tr>
+</table>
+</td>
+</tr> 
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>Is the child(ren) currently residing with the parents?:</td>
+<td><input type="checkbox" runat="server" id="ResidingWithParentsYes" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td><input type="checkbox" runat="server" id="ResidingWithParentsNo" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr>
+<td>If "No", refer to the Intervention Services Program by completing the Intervention Services Referral Form #51_08_07_46_305 07.
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>CSSD Plan Completed:</td>
+<td><input type="checkbox" runat="server" id="FCAP" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">FCAP</td>
+
+<td><input type="checkbox" runat="server" id="PlanForTheChild" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Plan for the Child</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr><td>Date Plan Completed (YYYY-MM-DD):
+<input id="txtDate" runat="server" class="formInput datepicker" type="text" style="width:155px;"></td></tr>
+
+<tr><td>Current Risk Assessment Instrument (RAI) Rating:
+<textarea id="RiskAssessmentInstrumentRating" runat="server" style="width:200px;" class="formInputExpand"></textarea></td></tr>
+
+<tr><td>Language spoken by parents:
+<textarea id="LanguageSpokenByParents" runat="server" style="width:200px;" class="formInputExpand"></textarea></td></tr>
+
+<tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>Is an interpreter required?:</td>
+<td><input type="checkbox" runat="server" id="InterpreterRequiredYes" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td><input type="checkbox" runat="server" id="InterpreterRequiredNo" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<td>
+
+<tr>
+<th class="sectionTitle" align="left">Triple P Services Required</th>
+</tr> 
+
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Reason for Triple P referral:<br>
+<textarea id="ReasonForReferral" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Triple P Service Requested:</td></tr>
+
+
+<tr><td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="Level4GroupTripleP" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Level 4 Group Triple P</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" runat="server" id="Level5Pathways" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Level 5 - Pathways* (Modules include: Avoiding Parent Traps and Coping with (parental) Anger)</td>
+</tr> 
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="Level5Enhanced" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Level 5 - Enhanced* (Modules include: Coping Skills and Partner Support)</td>
+</tr>
+
+</table>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td>*Parents must complete Level 4 Group Triple P before being referred to Level 5 Pathways or Enhanced.</td>
+</tr> 
+
+
+</td> </tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr><td>Have the parents previously completed the following Triple P Programs?<br></td>
+
+<tr><td>&nbsp;</td></tr>
+
+</tr>
+</table>
+</td>
+
+
+<!--To HERE -->
+
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<th class="sectionTitle" align="left">Additional Family Background</th>
+</tr> 
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Custody Arrangements (Please state the current custody arrangement for the child(ren)/youth.)<br>
+<textarea id="CustodyArrangements" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Relevant Diagnosis (Include any family mental health, developmental issues or learning disabilities.)<br>
+<textarea id="RelevantDiagnosis" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>To your knowledge check if the child(ren)/youth has experienced or witnessed:</td></tr>
+
+
+<tr><td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedFamilyViolence" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Family Violence</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" runat="server" id="WitnessedPhysicalAbuse" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Physical Abuse</td>
+</tr> 
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedSexualAbuse" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Sexual Abuse</td>
+</tr>
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedEmotionalAbuse" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Emotional Abuse</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" runat="server" id="WitnessedNeglect" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Neglect</td>
+</tr> 
+
+<tr>
+<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedOther" value="1" class="formInput" /></td>
+<td style="vertical-align: middle; height: 21px;">Other, please specify:
+</td>
+</tr>
+<tr><td><textarea id="WitnessedOtherSpecify" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+
+</table>
+</td> </tr>
+
+
+
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Briefly outline the current involvement with CSSD and include any parenting issues and maltreatment concerns.<br>
+<textarea id="CurrentInvolvementWithCssd" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>Is there a history of behavior with the child, youth, or family that would necessitate extra safety precautions on the part of the Intervention
+Services staff member?:</td>
+<td><input type="checkbox" runat="server" id="ExtraSafetyPrecautionsYes" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td><input type="checkbox" runat="server" id="ExtraSafetyPrecautionsNo" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr><td>If yes, please explain:<br>
+<textarea id="ExtraSafetyPrecautionsExplanation" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>Has parent/caregiver/youth services client consent to this referral?</td>
+<td><input type="checkbox" runat="server" id="ClientConsentToReferralYes" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td><input type="checkbox" runat="server" id="ClientConsentToReferralNo" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>Please forward referral form to:</td></tr>
+<tr><td>Central/West referrals to: cssdsirr@gov.nl.ca</td></tr>
+<tr><td>Metro/Labrador referrals to: cssdinterventionref@gov.nl.ca</td></tr>
+<tr><td><strong>Please ensure when sending referrals via e-mail that all referrals are encrypted.</strong></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+
+<tr><td style="align: right;"><strong><i>Form No: 51_08_07_46_310_2017 03</i></strong></td></tr>
+
+
+
+
+</table>
+</td> 
+</tr> 
+</table>
+</td>
+</tr> 
+		
+	
+	
+	    </tbody>
+</table>

@@ -1,0 +1,483 @@
+<table align="center" id="MatrixForm" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td class="gnlLogo" style="height: 108px;">
+                                    <img alt="" src="clientimages/logo.png" /></td>
+                                    <td style="height: 108px; text-align: center; vertical-align: middle;">
+                                    <textarea class="formInputExpand formTitle" id="txtFormTitle" style="width: 400px;" readonly="readonly" runat="server">Adoption Subsidy Review</textarea></td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 25px; text-align: center; vertical-align: bottom;">
+                                    <input class="departmentName" id="txtDepartmentName" style="width: 280px;" type="text" readonly="readonly" runat="server" value="Children, Seniors and Social Development" /></td>
+                                    <td style="text-align: right; vertical-align: bottom;">
+                                    <input class="formName" id="txtFormName" style="width: 400px;" type="text" readonly="readonly" runat="server" value="ADOPS000003-20160831" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th align="left" class="sectionTitle">Part I</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th align="left" class="sectionTitlesmall">Adoptive Parent(s)</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Adoptive Parent<br />
+                                    <textarea class="formInputExpand" id="txtAdoptiveParentName1" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Adoptive Parent<br />
+                                    <textarea class="formInputExpand" id="txtAdoptiveParentName2" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Residential and Mailing Address<br />
+                                    <textarea class="formInputExpand" id="txtResidentialAndMailingAddress" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Home Telephone Number<br />
+                        <textarea class="formInputExpand" id="txtHomeTelephoneNumber" style="width: 160px;" runat="server"></textarea>
+                        </td>
+                        <td>Work Telephone Number<br />
+                        <textarea class="formInputExpand" id="txtWorkTelephoneNumber" style="width: 160px;" runat="server"></textarea>
+                        </td>
+                        <td>Cell Telephone Number<br />
+                        <textarea class="formInputExpand" id="txtCellTelephoneNumber" style="width: 160px;" runat="server"></textarea>
+                        </td>
+                        <td>Adoption Subsidy File Number<br />
+                        <textarea class="formInputExpand" id="txtAdoptionSubsidyFileNumber" style="width: 190px;" runat="server"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th align="left" class="sectionTitlesmall">Adopted Child</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Child's Name<br />
+                        <textarea class="formInputExpand" id="txtChildsName" style="width: 500px;" runat="server"></textarea>
+                        </td>
+                        <td>Date of Birth (YYYY-MM-DD)<br />
+                        <input class="formInput datepicker" id="txtChildsDateOfBirth" style="width: 175px;" type="text" runat="server" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Date <em>Request to Approve a Child for an Adoption Subsidy</em>
+                        approved (YYYY-MM-DD)<br />
+                        <input class="formInput datepicker" id="txtRequestToApproveDate" style="width: 320px;" type="text" runat="server" />
+                        </td>
+                        <td>Date of previously approved <em>Adoption Subsidy Agreement
+                        </em>(where applicable) (YYYY-MM-DD)<br />
+                        <input class="formInput datepicker" id="txtDateOfPreviouslyApproved" style="width: 320px;" type="text" runat="server" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Social Worker<br />
+                        <textarea class="formInputExpand" id="txtSocialWorkerName" style="width: 500px;" runat="server"></textarea>
+                        </td>
+                        <td>Telephone Number<br />
+                        <textarea class="formInputExpand" id="txtSocialWorkerTelephoneNumber" style="width: 180px;" runat="server"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th align="left" class="sectionTitle">Part II</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                </tr>
+                                <tr>
+                                    <th align="left" class="sectionTitlesmall">Adoption Subsidy
+                                    Review completed as a result of the following:</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th align="left" class="sectionTitlesmall">Home Visits /
+                                    Office Visits / Professional Consultations / Collateral
+                                    Contacts:</th>
+                                    <td align="left">
+                                    <div class="col-md-12" style="padding-bottom: 5px; padding-left: 0px;">
+                                    <div>
+                                    <div>
+                                    <button class="btn btn-primary dropdown-toggle button-small margin-right no-print" style="width: 22px; font-weight: normal;" type="button" data-toggle="dropdown">
+                                    <span class="caret" style="margin-right: 0px;">
+                                    </span></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">
+                                        <input class="menuLink" id="AddListName" style="cursor: pointer;" type="submit" runat="SERVER" datasrc="ListName" value="Add New" /></a>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table width="100%" border="1">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;"><strong>Date (YYYY-MM-DD)</strong></td>
+                                    <td style="text-align: center;"><strong>Who was included
+                                    in interview <br />
+                                    (Please specify type of interview - individual/couple/family)</strong></td>
+                                    <td style="text-align: center;"><strong>Total Interview Time</strong></td>
+                                    <td></td>
+                                </tr>
+                                <input id="ListName" type="hidden" runat="server" />
+                                <!-- HtmlTemplate Start ListName -->
+                                <tr>
+                                    <td>
+                                    <input class="formInput datepicker" id="txtDateOfInterview" style="width: 120px;" type="text" runat="server" />
+                                    </td>
+                                    <td>
+                                    <textarea class="formInputExpand" id="txtWhoWasIncludedInInterview" style="width: 400px;" runat="server"></textarea></td>
+                                    <td>
+                                    <textarea class="formInputExpand" id="txtTotalInterviewTime" style="width: 100px;" runat="server"></textarea>
+                                    </td>
+                                    <td>
+                                    <input class="buttonStyle imageButton no-print" id="DeleteListName" type="image" src="images\removeItem.gif" runat="SERVER" datasrc="ListName" datafld="Delete" value="Delete" /></td>
+                                </tr>
+                                <!-- HtmlTemplate End ListName -->
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th align="left" class="sectionTitle">Part III</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Discuss any changes in the overall composition and personal
+                                    circumstances of the adoptive parent(s) that impact their
+                                    ability to meet the needs of the child:<br />
+                                    <textarea class="formInputExpand" id="txtChangesinCompositionCircumstances" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Provide detailed information related to any changes
+                                    in the child's developmental needs:<br />
+                                    <textarea class="formInputExpand" id="txtChildsDevelopmentalNeeds" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Discuss any improvements in the child's development
+                                    and the impact this has on the need for support services:<br />
+                                    <textarea class="formInputExpand" id="txtImprovementsInDevelopment" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Provide an itemized list of all services required to
+                                    meet the child's needs and how these services will be obtained
+                                    over the following twelve months. Clearly indicate any costs
+                                    associated with the service:<br />
+                                    <textarea class="formInputExpand" id="txtItemizedListOfServices" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Outline all supporting documentation and/or consultations
+                                    related to any recommended continuation of or new support
+                                    services:<br />
+                                    <textarea class="formInputExpand" id="txtSupportingDocumentation" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Outline any other information deemed significant to
+                                    the review:<br />
+                                    <textarea class="formInputExpand" id="txtOtherSignificantInformation" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th align="left" class="sectionTitle">Summary and Recommendations</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Summarize your overall assessment of the services required
+                                    to support the child in this placement for the next twelve
+                                    months. (Include information related to your assessment
+                                    of the adoptive parent's ability to meet those needs through
+                                    personal or community resources):<br />
+                                    <textarea class="formInputExpand" id="txtName" style="width: 100%;" runat="server"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th align="left" class="sectionTitle">Signatures</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; border-image: none;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>Social Worker<br />
+                                    <textarea class="formInputExpand" id="txtSocialWorkerSignature" style="width: 250px;" runat="server"></textarea>
+                                    </td>
+                                    <td>Date (YYYY-MM-DD)<br />
+                                    <input class="formInput datepicker" id="txtSocialWorkerDate" style="width: 110px;" type="text" runat="server" />
+                                    </td>
+                                    <td style="padding: 0px; text-align: left;">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoSocialWorkerRecommendation" class="formInput" id="rdoSocialWorkerRecommended" type="radio" runat="server" value="Recommended" /></td>
+                                                <td style="vertical-align: middle;">Adoption Subsidy
+                                                Agreement Recommended</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoSocialWorkerRecommendation" class="formInput" id="rdoSocialWorkerNotRecommended" type="radio" runat="server" value="NotRecommended" /></td>
+                                                <td style="vertical-align: middle;">Adoption Subsidy
+                                                Agreement Not Recommended</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoSocialWorkerRecommendation" class="formInput" id="rdoSocialWorkerRecommendChange" type="radio" runat="server" value="RecommendedChange" /></td>
+                                                <td style="vertical-align: middle;">Recommended
+                                                changing from an Adoption Subsidy <br />
+                                                Agreement
+                                                to a Deferred Adoption Subsidy Agreement</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Clinical Program Supervisor<br />
+                                    <textarea class="formInputExpand" id="txtClinicalSupervisorSignature" style="width: 250px;" runat="server"></textarea>
+                                    </td>
+                                    <td>Date (YYYY-MM-DD)<br />
+                                    <input class="formInput datepicker" id="txtClinicalSupervisorDate" style="width: 110px;" type="text" runat="server" />
+                                    </td>
+                                    <td style="padding: 0px; text-align: left;">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoClinicalSupervisorRecommendation" class="formInput" id="rdoClinicalSupervisorRecommended" type="radio" runat="server" value="Recommended" /></td>
+                                                <td style="vertical-align: middle;">Adoption Subsidy
+                                                Agreement Recommended</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoClinicalSupervisorRecommendation" class="formInput" id="rdoClinicalSupervisorNotRecommended" type="radio" runat="server" value="NotRecommended" /></td>
+                                                <td style="vertical-align: middle;">Adoption Subsidy
+                                                Agreement Not Recommended</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoClinicalSupervisorRecommendation" class="formInput" id="rdoClinicalSupervisorRecommendedChange" type="radio" runat="server" value="RecommendedChange" /></td>
+                                                <td style="vertical-align: middle;">Recommended
+                                                changing from an Adoption Subsidy <br />
+                                                Agreement
+                                                to a Deferred Adoption Subsidy Agreement</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Manager<br />
+                                    <textarea class="formInputExpand" id="txtManagerSignature" style="width: 250px;" runat="server"></textarea>
+                                    </td>
+                                    <td>Date (YYYY-MM-DD)<br />
+                                    <input class="formInput datepicker" id="txtManagerDate" style="width: 110px;" type="text" runat="server" />
+                                    </td>
+                                    <td style="padding: 0px; text-align: left;">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoManagerApproval" class="formInput" id="rdoManagerApproved" type="radio" runat="server" value="Approved" /></td>
+                                                <td style="vertical-align: middle;">Approved</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 20px;">
+                                                <input name="rdoManagerApproval" class="formInput" id="rdoManagerNotApproved" type="radio" runat="server" value="Not Approved" /></td>
+                                                <td style="vertical-align: middle;">Not Approved</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
