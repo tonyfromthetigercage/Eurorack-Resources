@@ -1,0 +1,873 @@
+<table id="MatrixForm" align="center" border="0">
+	<tr>
+		<td>
+		<table width="100%">
+        <tr>
+                <td>
+                <div class="well well-lg no-print" id="divCompletionWarning" style="border-color: #ebccd1; color: #a94442; font-size: 12px; display: none; background-color: #f2dede;">
+                <h4>This form is not complete</h4>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <div class="well well-lg no-print" id="divCompletionSuccess" style="border-color: #bce8f1; color: #31708f; font-size: 12px; display: none; background-color: #d9edf7;">
+                <h4>This form is complete and ready for approval</h4>
+                </div>
+                </td>
+            </tr>
+			<tr>
+				<td>
+				<table width="100%">
+					<tr>
+
+						<td style="vertical-align: middle; text-align: center; height: 108px;">
+						<div class="formTitle">
+							Investigation Report
+						</div></td>
+					</tr>				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th align="left" class="sectionTitle">Case Information</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+					<tr>
+                        <td>Household File Name:<br>
+						<textarea id="txtISMName" runat="server" style="width:200px;" class="formInputExpand" disabled="true"></textarea>
+						</td>
+						<td>Investigation Number:<br>
+						<textarea id="txtFileNumber" runat="server" style="width:200px;" class="formInputExpand"  disabled="true"></textarea>
+						</td>
+						<td>Date of Summary:<br>
+						<input id="txtCaseOpenStartDate" runat="server" style="width:200px;" class="formInput datepicker" disabled="false"></input>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+    <tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<th align="left" class="sectionTitle">Child/Youth in Home</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+				<input id="ChildSection" runat="server" type="hidden">
+				<!-- HtmlTemplate Start ChildSection AllChildren -->
+					<tr>
+						<td>Full Name<br>
+						<input type="text" id="CHILD@FullName" MAPNAME="CHILD@Name" runat="server" style="width:200px;" class="formInput" disabled="true" />
+						</td>
+						<td>DOB<br>
+						<input type="text" id="CHILD@BirthDate" MAPNAME="CHILD@DOB" runat="server" style="width:120px;" class="formInput datepicker" disabled="true" />
+						</td>
+						<td>Role<br>
+						<input type="text" id="CHILD@Role" MAPNAME="CHILD@Role" runat="server" style="width:200px;" class="formInput" disabled="true" />						
+						</td>
+					</tr>
+					<!-- HtmlTemplate End ChildSection -->
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<th align="left" class="sectionTitle">Adults in Home</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<input id="Applicant" runat="server" type="hidden">
+
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<input id="ParentSection" runat="server" type="hidden">
+				<!-- HtmlTemplate Start ParentSection Adult -->
+				<table border="0" width="100%">
+					<tr>
+					<td>Caregiver:<br>
+					<input type="text" id="CAREGIVER@FullName" MAPNAME="CAREGIVER@Name" runat="server" style="width:200px;" class="formInput" disabled="true" />
+					</td>
+                    <td>DOB:<br>
+					<input type="text" id="CAREGIVER@BirthDate" MAPNAME="CAREGIVER@DOB" runat="server" style="width:120px;" class="formInput datepicker" disabled="true"></input>
+					</td>
+					<td>Role:<br>
+					<input type="text" id="CAREGIVER@Role" MAPNAME="CAREGIVER@Role" runat="server" style="width:200px;" class="formInput" disabled="true" />
+					</td>
+					</tr>
+				</table><!-- HtmlTemplate End ParentSection -->
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<th align="left" class="sectionTitle">Assessment Summary</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+					<tr>
+					<td><b>Outcome of Most Recent Safety Assessment:</b><br><br>
+					</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" readonly="readonly" id="txtCurrentCaseStatus" runat="server" class="formInput" style="width:100%" disabled="true" onchange="ChangeWell();"></input>
+						</td>
+					</tr>
+						<tr>
+						<td>
+							&nbsp;
+						</td>
+					</tr>
+				
+					<tr>
+					<td>
+					<b>Outcome of Most Recent Risk Assessment:</b><br><br>
+					</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" readonly="readonly" id="txtCurrentCaseRisk" runat="server" class="formInput" style="width:100%" disabled="true" onchange="ChangeWell();"></input>
+						</td>
+					</tr>			
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<th align="left" class="sectionTitle">Substantiation Summary</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+					<tr>
+					<td colspan="4" align="center" valign="middle">
+						 <!--Reported Concerns -->
+						<INPUT TYPE="hidden" ID="ReportedConcerns" RUNAT="server" />
+						<table class="mainTableMaxWidth" cellspacing="3" cellpadding="3" width="100%" border="0">
+							<tr>
+								<td align="left"></td>
+								<td align="left">Reported Maltreatment</td>
+								<td align="left">&nbsp;</td>
+								<td align="left">Child</td>
+								<td align="left">&nbsp;</td>
+								<td align="left">Adult</td>
+								<td align="left">&nbsp;</td>
+								<td align="left">Outcome</td>
+                            </tr>
+                        <!-- HtmlTemplate Start ReportedConcerns Request -->
+                        <tr>
+                            <td align="left"></td>
+                            <td align="left"><input style="border:none;color:black;" type="text" id="txtAllegation" mapname="REPORTEDCONCERN@StatusDisplayText" class="formInput" runat="server" />&nbsp;</td>
+                            <td align="left">&nbsp;</td>
+                            <td align="left"><input style="border:none;color:black;" type="text" id="txtAllegationChildName" mapname="REPORTEDCONCERN@ChildName" class="formInput" runat="server" />&nbsp;</td>
+                            <td align="left">&nbsp;</td>
+                            <td align="left"><input style="border:none;color:black;" type="text" id="txtAllegationAdultName" mapname="REPORTEDCONCERN@AdultName" class="formInput" runat="server" />&nbsp;</td>
+                            <td align="left">&nbsp;</td>
+                            <td align="left"><input style="border:none;color:black;" type="text" id="txtAllegationStatus" mapname="REPORTEDCONCERN@AllegationStatus" class="formInput" runat="server"  onchange="ChangeWell();"/>&nbsp;</td>
+                        </tr>
+                        <!-- HtmlTemplate End ReportedConcerns -->
+                        <tr>
+                            <td align="left" colspan="10">&nbsp;</td>
+                        </tr>
+                    </table>
+					</td>
+					</tr>					
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<th align="left" class="sectionTitle">Outcome of Investigation</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+					<tr>
+					    <td><b>Initial Recommended Outcome</b><br><br>
+					</td>
+					</tr>
+					<tr>
+					<td>
+						<input type="radio" runat="server" id="rdInitialRecommendedOutcomeChildInNeedOfProtection" name="rdInitialRecommendedOutcome" value="Child Is In Need Of PI" class="formInput" disabled="true" onchange="ChangeWell();" />&nbsp;Child in Need of Protection<br>
+						<input type="radio" runat="server" id="rdInitialRecommendedOutcomeChildNotInNeedOfProtection" name="rdInitialRecommendedOutcome" value="Child Is NOT In Need Of PI" class="formInput" disabled="true" onchange="ChangeWell();" />&nbsp;Child Not in Need of Protection<br>
+					</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+                    <tr>
+					    <td><b>Final Outcome of Investigation</b><br><br>
+					</td>
+                    </tr>
+					<tr>
+					<td>
+						<input type="radio" runat="server" id="rdFinalRecommendedOutcomeChildInNeedOfProtection" name="rdFinalRecommendedOutcome" value="Child Is In Need Of PI" class="formInput" onchange="DetermineRecommendedServiceDecision();ShowStatutes();ChangeWell();" />&nbsp;Child in Need of Protection<br>
+						<input type="radio" runat="server" id="rdFinalRecommendedOutcomeChildNotInNeedOfProtection" name="rdFinalRecommendedOutcome" value="Child Is NOT In Need Of PI" class="formInput" onchange="DetermineRecommendedServiceDecision();ShowStatutes();ChangeWell();" />&nbsp;Child Not in Need of Protection<br>
+					</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b>If final outcome of the investigation is different than the recommended outcome, please explain: </b>
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<textarea runat="server" id="txtFinalOutcomeDifferent" class="formInputExpand" onchange="ChangeWell();"></textarea>
+						</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <div id="divStatues">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td>
+                                        <b>CFSA Sec 7(3) Statutes</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartA" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(a)	The child has suffered physical harm inflicted by the child's parent or caused by the parent's inability to care and provide for or supervise and protect the child adequately;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartB" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(b)	there is a substantial risk that the child will suffer physical harm inflicted by the child's parent or caused by the parent's inability to care and provide for or supervise and protect the child adequately
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartC" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(c)	the child has been sexually molested or sexually exploited by the child's parent or by another person in circumstances where the child's parent knew or should have known of the possibility of sexual molestation or sexual 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartD" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(d)	there is a substantial risk that the child will be sexually molested or sexually exploited by the child's parent or by another person in circumstances where the child's parent knows or should know of the possibility of sexual molestation or sexual exploitation and is unwilling or unable to protect the child;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartE" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(e)	the child has demonstrated sever anxiety, depression, withdrawal, self destructive behaviour, or aggressive behaviour towards others, or any other sever behaviour that is consistent with the child having suffered emotional harm and the child's parent does not provide, or refuses or is unavailable or unable to consent to provision of service, treatment or healing processes to remedy or alleviate the harm;   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartF" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(f)	there is substantial risk that the child will suffer emotional harm of the kind described in paragraph (e), and the child's parent does not provide, or refuses or is unavailable or unable to consent to the provision of, services, treatment or healing processes to prevent harm;   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartG" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(g)	the child suffers from a mental, emotional or developmental condition that, if not remedied, could seriously impair the child's development, and the child's parent does not provide, or refuses, or is unavailable or unable to consent to the provision of, services, treatment or healing processes to remedy or alleviate the condition;   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartH" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(h)	the child has been subject to a pattern of neglect that has resulted in physical or emotional harm to the child  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartI" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(i)	the child has been subject to a pattern of neglect and there is substantial risk that the pattern of neglect will result in physical or emotional harm to the child;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartJ" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(j)	the child has suffered physical or emotional harm caused by being exposed to repeated domestic violence by or towards a parent of the child and the child's parent fails or refuses to obtain services, treatment or healing processes to remedy or alleviate the harm;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartK" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(k)	the child has been exposed to repeated domestic violence by or towards a parent of the child and there is a substantial risk that the exposure will result in physical or emotional harm to the child and the child's parent fails or refuses to obtain services, treatment or healing processes to prevent the harm;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartL" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(l)	the child's health or emotional or mental well-being has been banned by the child's use of alcohol, drugs, solvents or similar substances, and the child's parent does not provide, or refuses or is unavailable or unable to consent to the provision of, services, treatment or healing processes to remedy or alleviate the harm;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartM" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(m)	there is a substantial risk that the child's health or emotional or mental well-being will be banned by the child's use of alcohol, drugs, solvents or similar substances, and the child's parent does not provide, or refuses or is unavailable or unable to consent to the provision of, services, treatment or healing processes to prevent the harm;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartN" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(n)	the child requires medical treatment to cure, prevent or alleviate serious physical harm or serious physical suffering, and the child's parent does not provide, or refuses or is unavailable or unable to consent to the provision of, the treatment;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartO" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(o)	the child suffers from malnutrition of a degree that, if not immediately remedied, could seriously impair the child's growth or development or result in permanent injury or death;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartP" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(p)	the child has been abandoned by the child's parent without the child's parent having made adequate provision for the child's care or custody and the child's extended family has not made adequate provision for the child's care or custody  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartQ" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(q)	the child's parents have died without making adequate provision for the child's care or custody and the child's extended family has not made adequate provision for the child's care or custody;  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartR" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(r)	the child's parent is unavailable or unable or unwilling to properly care for the child and the child's extended family has not made adequate provision for the child's care or custody; or  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="chkSection73PartS" runat="server" value="1" onchange="ChangeWell();"/>&nbsp;(s)	the child is less than 12 years if age and has killed or seriously injured another person or has persisted in injuring others or causing damage to the property of others, and services, treatment or healing process are necessary to prevent a recurrence, and the child's parent does not provide, or refuses or is unavailable or unable to consent to the provision of, the service, treatment or healing process.   
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    </tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+    </tr>
+	<tr>
+		<th align="left" class="sectionTitle">Service Decision</th>
+	</tr>
+	<tr>
+		<td style="border: 1px black solid;">
+		<table border="0" width="100%">
+			<tr>
+				<td>
+				<table border="0" width="100%">
+						<tr>
+					    <td><b>Initial Recommended Service</b><br><br>
+						</td>
+						</tr>
+						<tr>
+							<td>
+								<textarea runat="server" id="txtIntialRecommendedServiceText" class="formInputExpand" disabled="true" onchange="ChangeWell();"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;<div class="page-break">
+							</div>
+							</td>
+						</tr>
+						<tr>
+					    <td><b>Final Service Decision</b><br><br>
+						</td>
+						</tr>
+						<tr>
+								<td>
+									<input type="radio" runat="server" id="rdoFinalServiceDecisionCloseInvestigationEndService" name="finalServiceDecision"  value="Close Investigation.  End Service" class="formInput" onclick="clearFinalServiceDecision();" onchange="ChangeWell();" /><b>&nbsp;Close Investigation.  End Service</b><br>
+									<input type="radio" runat="server" id="rdoFinalServiceDecisionCloseInvestigationMakeReferral" name="finalServiceDecision"  value="Close Investigation.  Make a Referral" class="formInput" onclick="clearFinalServiceDecision();" onchange="ChangeWell();" /><b>&nbsp;Close Investigation.  Make a Referral</b><br>
+									<input type="radio" runat="server" id="rdoFinalServiceDecisionCloseInvestigationOpenPreventionService" name="finalServiceDecision"  value="Close Investigation.  Open a Prevention Service" class="formInput" onclick="clearFinalServiceDecision();" onchange="ChangeWell();" /><b>&nbsp;Close Investigation.  Open a Prevention Service</b><br>
+									<input type="radio" runat="server" id="rdoFinalServiceDecisionCloseInvestigationOpenProtectionService" name="finalServiceDecision"  value="Open a Protection Service" class="formInput" onclick="clearFinalServiceDecision();" onchange="ChangeWell();" /><b>&nbsp;Open a Protection Service</b><br>
+									<input type="radio" runat="server" id="rdoFinalServiceDecisionCloseInvestigationAlreadyOpen" name="finalServiceDecision"  value="There is already a protection service open.  Continue services and update case plan as required. " class="formInput" onclick="clearFinalServiceDecision();" onchange="ChangeWell();" /><b>&nbsp;There is Already an Active Protection Service.  Continue Services and Update Case Plan as Required.</b><br>
+								</td>
+						</tr>
+						<tr>
+							<td>&nbsp;<div class="page-break">
+							</div>
+							</td>
+						</tr>
+						<tr>
+					    <td><b>If final service decision is different than the recommended service decision, please explain:</b>
+						</td>
+						</tr>
+						<tr>
+					    <td><textarea runat="server" id="txtFinalServiceDecisionText" class="formInputExpand" onchange="ChangeWell();"></textarea>
+						</td>
+						</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<div class="page-break">
+		</div>
+		</td>
+	</tr>	
+	<tr>
+		<td><br>&nbsp;</td>
+	</tr>
+</table>
+<table id="MatrixForm" class="printonly" align="center" border="0" style="padding: 2px">
+			<tr>
+				<td style="height:35px">
+					CPW Signature:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+				<td style="width:25px">&nbsp;</td>
+				<td>
+					Supervisor Signature:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+			</tr>
+			<tr>
+				<td style="height:35px">
+					CPW Name:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+				<td style="width:25px">&nbsp;</td>
+				<td>
+					Supervisor Name:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+			</tr>
+			<tr>
+				<td style="height:35px">
+					Date:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+				<td style="width:25px">&nbsp;</td>
+				<td>
+					Date:
+				</td>
+				<td>
+					____________________________________________________
+				</td>
+			</tr>
+		</table>
+
+<script type="text/javascript">
+
+	window.onload = function()
+		{
+			DetermineRecommendedOutcome();
+            ShowStatutes();
+            ChangeWell();
+		}; 
+
+	function clearFinalServiceDecision(){
+		var txtFinalServiceDecisionText = document.getElementById('txtFinalServiceDecisionText');
+		txtFinalServiceDecisionText.value = '';
+	}
+
+	function DetermineRecommendedOutcome(){
+		var safetyOutcome_Safe = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentSafetyAssessmentOutcomeSafe');
+		var safetyOutcome_SafeWithPlan = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentSafetyAssessmentOutcomeSafeWithPlan');
+		var safetyOutcome_Unsafe = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentSafetyAssessmentOutcomeUnsafe');
+
+		var riskOutCome_Low = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeLow');
+		var riskOutCome_Moderate = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeModerate');
+		var riskOutCome_High = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeHigh');
+		var riskOutCome_VeryHigh = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeVeryHigh');
+
+		var initialRecommended_InNeedOfProtection = document.getElementById('rdInitialRecommendedOutcomeChildInNeedOfProtection');
+		var initialRecommended_NotInNeedOfProtection = document.getElementById('rdInitialRecommendedOutcomeChildNotInNeedOfProtection');
+        var textCurrentCaseStatus = document.getElementById('txtCurrentCaseStatus');
+        var textCurrentCaseRisk = document.getElementById('txtCurrentCaseRisk');
+
+		if(textCurrentCaseStatus.value == 'Unsafe'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseStatus.value == 'Safe with a Plan'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseStatus.value == 'Safe' && textCurrentCaseRisk.value =='High'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseStatus.value == 'Safe' && textCurrentCaseRisk.value =='Very High'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseRisk.value =='Moderate'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseRisk.value =='Very High'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseRisk.value =='High'){
+			initialRecommended_InNeedOfProtection.checked = true;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else if(textCurrentCaseStatus.value == '' && textCurrentCaseRisk.value =='' || textCurrentCaseStatus.value == 'Safety Assessment Not Yet Completed' && textCurrentCaseRisk.value ==''){
+			initialRecommended_InNeedOfProtection.checked = false;
+			initialRecommended_NotInNeedOfProtection.checked = false;
+		}
+		else{
+			initialRecommended_InNeedOfProtection.checked = false;
+			initialRecommended_NotInNeedOfProtection.checked = true;
+		}
+	}
+
+	function DetermineRecommendedServiceDecision(){
+		var riskOutCome_Low = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeLow');
+		var riskOutCome_Moderate = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeModerate');
+		var riskOutCome_High = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeHigh');
+		var riskOutCome_VeryHigh = document.getElementById('rdoSectionTwoSafetyAndRiskAssessmentOutcomesRecentRiskAssessmentOutcomeVeryHigh');
+
+		var finalRecommended_InNeedOfProtection = document.getElementById('rdFinalRecommendedOutcomeChildInNeedOfProtection');
+		var finalRecommended_NotInNeedOfProtection = document.getElementById('rdFinalRecommendedOutcomeChildNotInNeedOfProtection');
+
+		var txtFinalServiceDecisionText = document.getElementById('txtFinalServiceDecisionText');
+
+		var txtIntialRecommendedServiceText = document.getElementById('txtIntialRecommendedServiceText');
+
+		//final service decision instantiation
+        var rdoFinalServiceDecisionCloseInvestigationEndService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationEndService');
+        var rdoFinalServiceDecisionCloseInvestigationMakeReferral = document.getElementById('rdoFinalServiceDecisionCloseInvestigationMakeReferral');
+        var rdoFinalServiceDecisionCloseInvestigationOpenPreventionService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationOpenPreventionService');
+        var rdoFinalServiceDecisionCloseInvestigationOpenProtectionService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationOpenProtectionService');
+        var rdoFinalServiceDecisionCloseInvestigationAlreadyOpen = document.getElementById('rdoFinalServiceDecisionCloseInvestigationAlreadyOpen');
+
+		if(finalRecommended_InNeedOfProtection.checked == true){
+			txtIntialRecommendedServiceText.value = 'Open Protection Service';
+
+			rdoFinalServiceDecisionCloseInvestigationEndService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationMakeReferral.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationOpenPreventionService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationOpenProtectionService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationAlreadyOpen.checked = false;
+
+
+			txtFinalServiceDecisionText.value = '';
+		}
+		else if(finalRecommended_NotInNeedOfProtection.checked == true){
+			rdoFinalServiceDecisionCloseInvestigationEndService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationMakeReferral.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationOpenPreventionService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationOpenProtectionService.checked = false;
+			rdoFinalServiceDecisionCloseInvestigationAlreadyOpen.checked = false;
+
+            if(riskOutCome_VeryHigh != null && riskOutCome_High != null && riskOutCome_Moderate != null){
+                if(riskOutCome_VeryHigh.checked){
+                    txtIntialRecommendedServiceText.value = 'Open Prevention Service';
+					txtFinalServiceDecisionText.value = '';
+                }
+                else if(riskOutCome_High.checked == true){
+                    txtIntialRecommendedServiceText.value = 'Open Prevention Service';
+					txtFinalServiceDecisionText.value = '';
+                }
+                else if(riskOutCome_Moderate.checked == true){
+                    txtIntialRecommendedServiceText.value = 'Close Investigation.  Open a Prevention Service';
+					txtFinalServiceDecisionText.value = '';
+                }
+                else{
+                    txtIntialRecommendedServiceText.value = 'Close Investigation';
+					txtFinalServiceDecisionText.value = '';
+                }
+            }
+            else{
+                txtIntialRecommendedServiceText.value = 'Close Investigation';
+				txtFinalServiceDecisionText.value = '';
+            }
+		}
+		else{
+			txtIntialRecommendedServiceText.value = 'Close Investigation';
+			txtFinalServiceDecisionText.value = '';
+		}
+	}
+
+    function ShowStatutes(){
+        var divStatues = document.getElementById('divStatues');
+        var rdoRecommendedOutcomeInNeed = document.getElementById('rdFinalRecommendedOutcomeChildInNeedOfProtection');
+        var rdoRecommendedOutcomeNotInNeed = document.getElementById('rdFinalRecommendedOutcomeChildNotInNeedOfProtection');
+		var txtFinalOutcomeDifferent = document.getElementById('txtFinalOutcomeDifferent');
+		 //statutes instantiation
+        var chkSection73PartA = document.getElementById('chkSection73PartA');
+        var chkSection73PartB = document.getElementById('chkSection73PartB');
+        var chkSection73PartC = document.getElementById('chkSection73PartC');
+        var chkSection73PartD = document.getElementById('chkSection73PartD');
+        var chkSection73PartE = document.getElementById('chkSection73PartE');
+        var chkSection73PartF = document.getElementById('chkSection73PartF');
+        var chkSection73PartG = document.getElementById('chkSection73PartG');
+        var chkSection73PartH = document.getElementById('chkSection73PartH');
+        var chkSection73PartI = document.getElementById('chkSection73PartI');
+        var chkSection73PartJ = document.getElementById('chkSection73PartJ');
+        var chkSection73PartK = document.getElementById('chkSection73PartK');
+        var chkSection73PartL = document.getElementById('chkSection73PartL');
+        var chkSection73PartM = document.getElementById('chkSection73PartM');
+        var chkSection73PartN = document.getElementById('chkSection73PartN');
+        var chkSection73PartO = document.getElementById('chkSection73PartO');
+        var chkSection73PartP = document.getElementById('chkSection73PartP');
+        var chkSection73PartQ = document.getElementById('chkSection73PartQ');
+        var chkSection73PartR = document.getElementById('chkSection73PartR');
+        var chkSection73PartS = document.getElementById('chkSection73PartS');
+
+        if(rdoRecommendedOutcomeInNeed.checked == true){
+			txtFinalOutcomeDifferent.value = '';
+            divStatues.style.display  = 'block';
+        }
+        else{
+            divStatues.style.display  = 'none';
+			chkSection73PartA.checked = false;
+			chkSection73PartB.checked = false;
+			chkSection73PartC.checked = false;
+			chkSection73PartD.checked = false;
+			chkSection73PartE.checked = false;
+			chkSection73PartF.checked = false;
+			chkSection73PartG.checked = false;
+			chkSection73PartH.checked = false;
+			chkSection73PartI.checked = false;
+			chkSection73PartJ.checked = false;
+			chkSection73PartK.checked = false;
+			chkSection73PartL.checked = false;
+			chkSection73PartM.checked = false;
+			chkSection73PartN.checked = false;
+			chkSection73PartO.checked = false;
+			chkSection73PartP.checked = false;
+			chkSection73PartQ.checked = false;
+			chkSection73PartR.checked = false;
+			chkSection73PartS.checked = false;
+        }
+    }
+
+    function ChangeWell(){
+
+        var completed = true;
+
+        //well instantiation
+        var wellAreaWarning = document.getElementById('divCompletionWarning');
+        var wellAreaSuccess = document.getElementById('divCompletionSuccess');
+
+		//Date of Assessment
+		var txtCaseOpenStartDate = document.getElementById('txtCaseOpenStartDate');
+
+        //safety and risk instantiation
+        var safetyOutcome = document.getElementById('txtCurrentCaseStatus');
+        var riskOutCome= document.getElementById('txtCurrentCaseRisk');
+
+
+        //intitial recommendation instantiation
+        var rdInitialRecommendedOutcomeChildInNeedOfProtection = document.getElementById('rdInitialRecommendedOutcomeChildInNeedOfProtection');
+        var rdInitialRecommendedOutcomeChildNotInNeedOfProtection = document.getElementById('rdInitialRecommendedOutcomeChildNotInNeedOfProtection');
+
+        //final recommendation instantiation
+        var rdoRecommendedOutcomeInNeed = document.getElementById('rdFinalRecommendedOutcomeChildInNeedOfProtection');
+        var rdoRecommendedOutcomeNotInNeed = document.getElementById('rdFinalRecommendedOutcomeChildNotInNeedOfProtection');
+
+        //final outcome different textbox
+        var txtFinalOutcomeDifferent = document.getElementById('txtFinalOutcomeDifferent');
+
+        //final service decision instantiation
+        var rdoFinalServiceDecisionCloseInvestigationEndService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationEndService');
+        var rdoFinalServiceDecisionCloseInvestigationMakeReferral = document.getElementById('rdoFinalServiceDecisionCloseInvestigationMakeReferral');
+        var rdoFinalServiceDecisionCloseInvestigationOpenPreventionService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationOpenPreventionService');
+        var rdoFinalServiceDecisionCloseInvestigationOpenProtectionService = document.getElementById('rdoFinalServiceDecisionCloseInvestigationOpenProtectionService');
+        var rdoFinalServiceDecisionCloseInvestigationAlreadyOpen = document.getElementById('rdoFinalServiceDecisionCloseInvestigationAlreadyOpen');
+
+		//initial recommended service text
+		var txtIntialRecommendedServiceText = document.getElementById('txtIntialRecommendedServiceText');
+
+		//final service decision is different
+		var txtFinalServiceDecisionText = document.getElementById('txtFinalServiceDecisionText');
+
+        //statutes instantiation
+        var divStatues = document.getElementById('divStatues');
+        var chkSection73PartA = document.getElementById('chkSection73PartA');
+        var chkSection73PartB = document.getElementById('chkSection73PartB');
+        var chkSection73PartC = document.getElementById('chkSection73PartC');
+        var chkSection73PartD = document.getElementById('chkSection73PartD');
+        var chkSection73PartE = document.getElementById('chkSection73PartE');
+        var chkSection73PartF = document.getElementById('chkSection73PartF');
+        var chkSection73PartG = document.getElementById('chkSection73PartG');
+        var chkSection73PartH = document.getElementById('chkSection73PartH');
+        var chkSection73PartI = document.getElementById('chkSection73PartI');
+        var chkSection73PartJ = document.getElementById('chkSection73PartJ');
+        var chkSection73PartK = document.getElementById('chkSection73PartK');
+        var chkSection73PartL = document.getElementById('chkSection73PartL');
+        var chkSection73PartM = document.getElementById('chkSection73PartM');
+        var chkSection73PartN = document.getElementById('chkSection73PartN');
+        var chkSection73PartO = document.getElementById('chkSection73PartO');
+        var chkSection73PartP = document.getElementById('chkSection73PartP');
+        var chkSection73PartQ = document.getElementById('chkSection73PartQ');
+        var chkSection73PartR = document.getElementById('chkSection73PartR');
+        var chkSection73PartS = document.getElementById('chkSection73PartS');
+
+        //the number of reported concerns
+        var reportedConcerns = document.getElementById('ReportedConcerns');
+
+
+        //tested
+        if(safetyOutcome.value != 'Safe' && safetyOutcome.value != 'Safe with a Plan' && safetyOutcome.value != 'Unsafe')
+        {
+            safetyOutcome.value = '';
+        }
+
+        //tested
+        if(riskOutCome.value != 'Low' && riskOutCome.value != 'Moderate' && riskOutCome.value != 'High' && riskOutCome.value != 'Very High'){
+            riskOutCome.value = '';
+        }
+
+		if(txtCaseOpenStartDate.value == ''){
+			completed = false;
+		}
+
+        //tested
+        if(safetyOutcome.value == '' ){
+            completed = false;
+        }
+
+        //tested
+        if(riskOutCome.value == ''){
+            completed = false;
+        }
+
+        //tested
+        if(reportedConcerns.value != ''){
+            var concerns = reportedConcerns.value.split(',');
+            for(var concern in concerns){
+                var control = document.getElementById('txtAllegationStatus_' + concerns[concern]);
+                if (control.value == ''){
+                    completed = false;
+                    break;
+                }
+            }
+        }
+
+        if (rdoFinalServiceDecisionCloseInvestigationEndService.checked == false && rdoFinalServiceDecisionCloseInvestigationMakeReferral.checked == false && rdoFinalServiceDecisionCloseInvestigationOpenPreventionService.checked == false && rdoFinalServiceDecisionCloseInvestigationOpenProtectionService.checked == false && rdoFinalServiceDecisionCloseInvestigationAlreadyOpen.checked == false){
+            completed = false;
+        }
+
+
+        if(divStatues.style.display == 'block'){
+            if(chkSection73PartA.checked == false && chkSection73PartB.checked == false && chkSection73PartC.checked == false && chkSection73PartD.checked == false && chkSection73PartE.checked == false && chkSection73PartF.checked == false && chkSection73PartG.checked == false && chkSection73PartH.checked == false && chkSection73PartI.checked == false && chkSection73PartJ.checked == false && chkSection73PartK.checked == false && chkSection73PartL.checked == false && chkSection73PartM.checked == false && chkSection73PartN.checked == false && chkSection73PartO.checked == false && chkSection73PartP.checked == false && chkSection73PartQ.checked == false && chkSection73PartR.checked == false && chkSection73PartS.checked == false){
+                completed = false;
+            }
+        }
+
+        if(rdoRecommendedOutcomeInNeed.checked == false && rdoRecommendedOutcomeNotInNeed.checked == false && txtFinalOutcomeDifferent.value == ''){
+            completed = false;
+        }
+
+
+		txtFinalOutcomeDifferent.disabled = true;
+		if(rdInitialRecommendedOutcomeChildInNeedOfProtection.checked == true && rdoRecommendedOutcomeNotInNeed.checked == true){
+			txtFinalOutcomeDifferent.disabled = false;
+        }
+
+		if(rdInitialRecommendedOutcomeChildInNeedOfProtection.checked == true && rdoRecommendedOutcomeNotInNeed.checked == true && txtFinalOutcomeDifferent.value == ''){
+			txtFinalOutcomeDifferent.disabled = false;
+            completed = false;
+        }
+
+        if(rdInitialRecommendedOutcomeChildNotInNeedOfProtection.checked == true && rdoRecommendedOutcomeInNeed.checked == true){
+			txtFinalOutcomeDifferent.disabled = false;
+        }
+
+		if(rdInitialRecommendedOutcomeChildNotInNeedOfProtection.checked == true && rdoRecommendedOutcomeInNeed.checked == true && txtFinalOutcomeDifferent.value == ''){
+			txtFinalOutcomeDifferent.disabled = false;
+            completed = false;
+        }
+
+		if(txtIntialRecommendedServiceText.value == 'Open Prevention Service' && rdoFinalServiceDecisionCloseInvestigationOpenPreventionService.checked == false  && txtFinalServiceDecisionText.value == ''){
+			completed = false;
+		}
+
+		if(txtIntialRecommendedServiceText.value == 'Open Protection Service' && rdoFinalServiceDecisionCloseInvestigationOpenProtectionService.checked == false && txtFinalServiceDecisionText.value == ''){
+			completed = false;
+		}
+
+		if(txtIntialRecommendedServiceText.value == 'Close Investigation.  Open a Prevention Service' && rdoFinalServiceDecisionCloseInvestigationOpenPreventionService.checked == false && txtFinalServiceDecisionText.value == ''){
+			completed = false;
+		}
+
+		if(txtIntialRecommendedServiceText.value == 'Close Investigation' && rdoFinalServiceDecisionCloseInvestigationEndService.checked == false && rdoFinalServiceDecisionCloseInvestigationMakeReferral.checked == false && txtFinalServiceDecisionText.value == ''){
+			completed = false;
+		}		
+
+
+        wellAreaWarning.style.display = 'none';
+        wellAreaSuccess.style.display = 'none';
+
+        if(completed == false){
+            wellAreaWarning.innerHTML = 'This form is NOT complete';
+            wellAreaWarning.style.display = 'block';
+        }
+        else{
+            wellAreaSuccess.innerHTML = 'This form is complete and ready for approval';
+            wellAreaSuccess.style.display = 'block';
+        }
+
+    }
+
+</script>
