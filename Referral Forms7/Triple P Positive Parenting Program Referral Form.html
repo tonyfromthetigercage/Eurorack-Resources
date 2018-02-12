@@ -72,11 +72,6 @@
 <td>Office Site:<br>
 <textarea id="ClinicalProgramSupervisorOfficeSite" runat="server" style="width:200px;" class="formInputExpand"></textarea></td>
 </tr>
-
-
-
-
-
 </table>
 </td> 
 </tr> 
@@ -84,8 +79,6 @@
 </td>
 </tr> 
 <tr><td>&nbsp;</td></tr>
-
-<!--Current Family Information-->
 
 <tr>
 <th class="sectionTitle" align="left">Current Family Information</th>
@@ -166,7 +159,7 @@
 
 <tr>
 <td style="padding:0px;">
-<table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="black">
+<table width="680px" border="1" cellpadding="0" cellspacing="0" bordercolor="black">
 <tr>
 <td style="text-align:center"><strong>Name of Child</strong></td>
 <td style="text-align:center"><strong>Date of Birth</strong></td>
@@ -203,10 +196,12 @@
 <table cellpadding="0" cellspacing="0">
 <tr>
 <td>Is the child(ren) currently residing with the parents?:</td>
-<td><input type="checkbox" runat="server" id="ResidingWithParentsYes" value="1" class="formInput" /></td>
+
+
+<td width="20px;"><input type="radio" runat="server" id="rdoResidingWithParentsYes" name="rdoResidingWithParents" value="Yes" class="formInput" /></td>
 <td style="vertical-align: middle;">Yes</td>
 
-<td><input type="checkbox" runat="server" id="ResidingWithParentsNo" value="1" class="formInput" /></td>
+<td width="20px;"><input type="radio" runat="server" id="rdoResidingWithParentsNo" name="rdoResidingWithParents" value="No" class="formInput" /></td>
 <td style="vertical-align: middle;">No</td>
 
 </tr>
@@ -225,10 +220,12 @@
 <table cellpadding="0" cellspacing="0">
 <tr>
 <td>CSSD Plan Completed:</td>
-<td><input type="checkbox" runat="server" id="FCAP" value="1" class="formInput" /></td>
+
+
+<td width="20px;"><input type="radio" runat="server" id="rdoPlanCompletedFcap" name="rdoPlanCompleted" value="Fcap" class="formInput" /></td>
 <td style="vertical-align: middle;">FCAP</td>
 
-<td><input type="checkbox" runat="server" id="PlanForTheChild" value="1" class="formInput" /></td>
+<td width="20px;"><input type="radio" runat="server" id="rdoPlanCompletedPlanForTheChild" name="rdoPlanCompleted" value="PlanForTheChild" class="formInput" /></td>
 <td style="vertical-align: middle;">Plan for the Child</td>
 
 </tr>
@@ -251,10 +248,11 @@
 <table cellpadding="0" cellspacing="0">
 <tr>
 <td>Is an interpreter required?:</td>
-<td><input type="checkbox" runat="server" id="InterpreterRequiredYes" value="1" class="formInput" /></td>
+
+<td width="20px;"><input type="radio" runat="server" id="rdoInterpreterRequiredYes" name="rdoInterpreterRequired" value="Yes" class="formInput" /></td>
 <td style="vertical-align: middle;">Yes</td>
 
-<td><input type="checkbox" runat="server" id="InterpreterRequiredNo" value="1" class="formInput" /></td>
+<td width="20px;"><input type="radio" runat="server" id="rdoInterpreterRequiredNo" name="rdoInterpreterRequired" value="No" class="formInput" /></td>
 <td style="vertical-align: middle;">No</td>
 
 </tr>
@@ -266,18 +264,24 @@
 </table>
 </td>
 </tr>
-
+</table>
+</td>
+</tr>
 
 <tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
 
-<td>
-
+<!--Reason for Triple P-->
 <tr>
 <th class="sectionTitle" align="left">Triple P Services Required</th>
 </tr> 
 
-<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td style="border: 1px black solid;">
+<table width="100%" border="0">
+<tr>
+<td>
+<table width="100%">
 
 <tr><td>Reason for Triple P referral:<br>
 <textarea id="ReasonForReferral" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
@@ -317,46 +321,92 @@
 </td> </tr>
 
 <tr><td>&nbsp;</td></tr>
-<tr><td>Have the parents previously completed the following Triple P Programs?<br></td>
-
-<tr><td>&nbsp;</td></tr>
+<tr><td>Have the parents previously completed the following Triple P Programs?</td></tr>
 
 <tr>
-<td>Level 4 Group:
-
 <td style="padding:0px 0px 0px 0px; text-align:left">
 <table cellpadding="0" cellspacing="0">
-
-
-<td width="20px;"><input type="radio" runat="server" id="rdoLevel4GroupYes" name="rdoLevel4Group" value="Yes" class="formInput" /></td>
+<tr>
+<td style="vertical-align: middle;">Level 4 Group:</td><td width="28px"></td>
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel4GroupYes" name="rdoLevel4Group" value="Yes" class="formInput" /></td>
 <td style="vertical-align: middle;">Yes</td>
 
-<td width="20px;"><input type="radio" runat="server" id="rdoLevel4GroupNo" name="rdoLevel4Group" value="No" class="formInput" /></td>
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel4GroupNo" name="rdoLevel4Group" value="No" class="formInput" /></td>
 <td style="vertical-align: middle;">No</td>
+<td width="30px">&nbsp;</td>
+<td style="vertical-align: middle;">If yes, date of completion (YYYY-MM-DD):
+<input id="txtLevel4GroupDateOfCompletion" runat="server" class="formInput datepicker" type="text" style="width:155px;"></td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr>
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;">Level 5 - Pathways:</td><td width="7px"></td>
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel5PathwaysYes" name="rdoLevel5Pathways" value="Yes" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel5PathwaysNo" name="rdoLevel5Pathways" value="No" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+<td width="30px">&nbsp;</td>
+<td style="vertical-align: middle;">If yes, date of completion (YYYY-MM-DD):
+<input id="txtLevel5PathwaysDateOfCompletion" runat="server" class="formInput datepicker" type="text" style="width:155px;"></td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+<tr>
+<td style="padding:0px 0px 0px 0px; text-align:left">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td style="vertical-align: middle;">Level 5 - Enhanced:</td><td width="1px"></td>
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel5EnhancedYes" name="rdoLevel5Enhanced" value="Yes" class="formInput" /></td>
+<td style="vertical-align: middle;">Yes</td>
+
+<td style="vertical-align: middle;" width="20px;"><input type="radio" runat="server" id="rdoLevel5EnhancedNo" name="rdoLevel5Enhanced" value="No" class="formInput" /></td>
+<td style="vertical-align: middle;">No</td>
+<td width="30px">&nbsp;</td>
+<td style="vertical-align: middle;">If yes, date of completion (YYYY-MM-DD):
+<input id="txtLevel5EnhancedDateofCompletion" runat="server" class="formInput datepicker" type="text" style="width:155px;"></td>
+
+</tr>
+</table>
+</td> 
+</tr>
+
+</table>
+</td>
+</tr>
 
 </table>
 </td>
 
 
+<!--Additional Family Background-->
 
-
-</table>
-</td>
-
-
-<!--To HERE -->
-
-<tr><td>&nbsp;</td></tr>
 <tr><td>&nbsp;</td></tr>
 
 <tr>
 <th class="sectionTitle" align="left">Additional Family Background</th>
 </tr> 
-<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td style="border: 1px black solid;">
+<table width="100%" border="0">
+<tr>
+<td>
+<table width="100%">
+
 
 <tr><td>Custody Arrangements (Please state the current custody arrangement for the child(ren)/youth.)<br>
 <textarea id="CustodyArrangements" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
-<tr><td>&nbsp;</td></tr>
+
 
 <tr><td>Relevant Diagnosis (Include any family mental health, developmental issues or learning disabilities.)<br>
 <textarea id="RelevantDiagnosis" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
@@ -364,64 +414,63 @@
 
 <tr><td>To your knowledge check if the child(ren)/youth has experienced or witnessed:</td></tr>
 
-
-<tr><td style="padding:0px 0px 0px 0px; text-align:left">
+<td style="padding:0px 0px 0px 0px; text-align:left">
 <table cellpadding="0" cellspacing="0">
 
 <tr>
-<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedFamilyViolence" value="1" class="formInput" /></td>
+<td style="height: 21px"><input type="checkbox" runat="server" id="chkFamilyViolence" value="1" class="formInput" /></td>
 <td style="vertical-align: middle; height: 21px;">Family Violence</td>
 </tr>
 
 <tr>
-<td><input type="checkbox" runat="server" id="WitnessedPhysicalAbuse" value="1" class="formInput" /></td>
+<td><input type="checkbox" runat="server" id="chkPhysicalAbuse" value="1" class="formInput" /></td>
 <td style="vertical-align: middle;">Physical Abuse</td>
 </tr> 
 
 <tr>
-<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedSexualAbuse" value="1" class="formInput" /></td>
-<td style="vertical-align: middle; height: 21px;">Sexual Abuse</td>
-</tr>
+<td><input type="checkbox" runat="server" id="chkSexualAbuse" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Sexual Abuse</td>
+</tr> 
 
 <tr>
-<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedEmotionalAbuse" value="1" class="formInput" /></td>
-<td style="vertical-align: middle; height: 21px;">Emotional Abuse</td>
-</tr>
+<td><input type="checkbox" runat="server" id="chkEmotionalAbuse" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Emotional Abuse</td>
+</tr> 
 
 <tr>
-<td><input type="checkbox" runat="server" id="WitnessedNeglect" value="1" class="formInput" /></td>
+<td><input type="checkbox" runat="server" id="chkNeglect" value="1" class="formInput" /></td>
 <td style="vertical-align: middle;">Neglect</td>
 </tr> 
 
 <tr>
-<td style="height: 21px"><input type="checkbox" runat="server" id="WitnessedOther" value="1" class="formInput" /></td>
-<td style="vertical-align: middle; height: 21px;">Other, please specify:
-</td>
-</tr>
-<tr><td><textarea id="WitnessedOtherSpecify" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<td><input type="checkbox" runat="server" id="chkWitnessedOther" value="1" class="formInput" /></td>
+<td style="vertical-align: middle;">Other</td>
+</tr> 
 
 </table>
-</td> </tr>
+</td> 
 
-
-
+<tr><td>If "Other", please specify:<br>
+<textarea id="txtWitnessedOtherSpecify" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
 <tr><td>&nbsp;</td></tr>
 
 <tr><td>Briefly outline the current involvement with CSSD and include any parenting issues and maltreatment concerns.<br>
-<textarea id="CurrentInvolvementWithCssd" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<textarea id="txtCurrentInvolvementWithCssd" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+
 <tr><td>&nbsp;</td></tr>
 
-<tr>
+<tr><td>Is there a history of behavior with the child, youth or family that would necessitate extra safety precautions on the part of the Intervention
+Services staff member?</td></tr>
 
+<tr>
 <td style="padding:0px 0px 0px 0px; text-align:left">
 <table cellpadding="0" cellspacing="0">
 <tr>
-<td>Is there a history of behavior with the child, youth, or family that would necessitate extra safety precautions on the part of the Intervention
-Services staff member?:</td>
-<td><input type="checkbox" runat="server" id="ExtraSafetyPrecautionsYes" value="1" class="formInput" /></td>
+
+<td width="20px;"><input type="radio" runat="server" id="rdoHistoryOfBehaviorYes" name="rdoHistoryOfBehavior" value="Yes" class="formInput" /></td>
 <td style="vertical-align: middle;">Yes</td>
 
-<td><input type="checkbox" runat="server" id="ExtraSafetyPrecautionsNo" value="1" class="formInput" /></td>
+<td width="20px;"><input type="radio" runat="server" id="rdoHistoryOfBehaviorNo" name="rdoHistoryOfBehavior" value="No" class="formInput" /></td>
 <td style="vertical-align: middle;">No</td>
 
 </tr>
@@ -429,28 +478,52 @@ Services staff member?:</td>
 </td> 
 </tr>
 
-<tr><td>If yes, please explain:<br>
-<textarea id="ExtraSafetyPrecautionsExplanation" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+<tr><td>If "Yes", please explain:<br>
+<textarea id="txHistoryOfBehaviorExplanation" runat="server" style="width:685px;" class="formInputExpand"></textarea></td></tr>
+
 <tr><td>&nbsp;</td></tr>
 
-<tr>
+<tr><td>Has parent/caregiver/youth services client consent to this referral?</td></tr>
 
+<tr>
 <td style="padding:0px 0px 0px 0px; text-align:left">
 <table cellpadding="0" cellspacing="0">
-<tr>
-<td>Has parent/caregiver/youth services client consent to this referral?</td>
-<td><input type="checkbox" runat="server" id="ClientConsentToReferralYes" value="1" class="formInput" /></td>
+
+
+<td width="20px;"><input type="radio" runat="server" id="rdoConsentToReferralYes" name="rdoConsentToReferral" value="Yes" class="formInput" /></td>
 <td style="vertical-align: middle;">Yes</td>
 
-<td><input type="checkbox" runat="server" id="ClientConsentToReferralNo" value="1" class="formInput" /></td>
+<td width="20px;"><input type="radio" runat="server" id="rdoConsentToReferralNo" name="rdoConsentToReferral" value="No" class="formInput" /></td>
 <td style="vertical-align: middle;">No</td>
 
-</tr>
+
 </table>
 </td> 
 </tr>
 
 <tr><td>&nbsp;</td></tr>
+
+
+
+
+
+
+</table>
+</td> 
+</tr>
+</table>
+</td>
+</tr>
+<!-- Close Additional Family Background-->
+
+
+<tr>
+<td>
+<table width="100%" border="0">
+<tr>
+<td>
+<table width="100%">
+
 <tr><td>&nbsp;</td></tr>
 <tr><td>&nbsp;</td></tr>
 
@@ -458,24 +531,31 @@ Services staff member?:</td>
 <tr><td>Central/West referrals to: cssdsirr@gov.nl.ca</td></tr>
 <tr><td>Metro/Labrador referrals to: cssdinterventionref@gov.nl.ca</td></tr>
 <tr><td><strong>Please ensure when sending referrals via e-mail that all referrals are encrypted.</strong></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
 
-
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
 <tr><td style="align: right;"><strong><i>Form No: 51_08_07_46_310_2017 03</i></strong></td></tr>
-
-
 
 
 </table>
 </td> 
-</tr> 
+</tr>
 </table>
 </td>
-</tr> 
-		
-	
-	
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	    </tbody>
 </table>
